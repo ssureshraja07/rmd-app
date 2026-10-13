@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 
+import logo from "../images/rmd-logo-white.png";
+
 const links = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about-us" },
@@ -45,14 +47,12 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-gray-900 border-b-2 border-red-800 shadow-lg">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center bg-red-800 text-sm font-extrabold text-white">
-            RMD
-          </span>
-          <span className="text-lg font-bold text-white">
-            RMD <span className="font-light text-gray-300">Industries</span>
-          </span>
-        </Link>
+<Link to="/" className="flex items-center gap-3">
+  <img src={logo} alt="RMD Industries" className="h-10 w-auto" />
+  <span className="hidden border-l border-gray-600 pl-3 text-sm font-light uppercase tracking-widest text-gray-300 sm:block">
+    Industries
+  </span>
+</Link>
 
         {/* Desktop menu */}
         <div className="hidden items-center gap-8 lg:flex">
